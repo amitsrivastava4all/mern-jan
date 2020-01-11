@@ -1,0 +1,192 @@
+a=100
+100
+var a = 100;
+undefined
+a= 'Amit';
+"Amit"
+typeof a;
+"string"
+a=1000;
+1000
+typeof a;
+"number"
+a=1000.0;
+1000
+typeof a;
+"number"
+a=100/0
+Infinity
+typeof a;
+"number"
+a
+Infinity
+a=100+"Amit"
+"100Amit"
+a=100 + 200
+300
+a= 100 + "100"
+"100100"
+a= 100 - "100"
+0
+a=" Amit " + " Srivastava"
+" Amit  Srivastava"
+a=" Amit " - " Srivastava"
+NaN
+typeof a;
+"number"
+a;
+NaN
+var price = 1000;
+undefined
+var qt = "two";
+undefined
+price * qt
+NaN
+isNaN(price*qt)
+true
+isNaN(price*qt)?0:price*qt;
+0
+qt = 2
+2
+isNaN(price*qt)?0:price*qt;
+2000
+a = 100/0;
+Infinity
+isFinite(a)?a:0
+0
+price =1000
+1000
+tax = "10"
+"10"
+price  + tax;
+"100010"
+price  + parseInt(tax);
+1010
+var t = "1000.00";
+undefined
+parseInt(t);
+1000
+typeof parseInt(t);
+"number"
+price = "";
+""
+parseInt(price);
+NaN
+isNaN(parseInt(price))?0:parseInt(price);
+0
+var t = "Amit";
+undefined
+t = "A";
+"A"
+t = 'A';
+"A"
+typeof t;
+"string"
+t = `hgdjkhgjdkhgjkdhfgkjdkfj
+gfhhkjghdfjkghfd
+ghfdjkg`;
+"hgdjkhgjdkhgjkdhfgkjdkfj
+gfhhkjghdfjkghfd
+ghfdjkg"
+t;
+"hgdjkhgjdkhgjkdhfgkjdkfj
+gfhhkjghdfjkghfd
+ghfdjkg"
+price;
+""
+price = 1000;
+1000
+var result = "Price is "+price;
+undefined
+result;
+"Price is 1000"
+result = "Price is ${price}";
+"Price is ${price}"
+result = `Price is ${price}`;
+"Price is 1000"
+var qt = 2;
+undefined
+var tax = 10;
+undefined
+result = "Price is "+price+" Qt is "+qt+" Tax is "+tax;
+"Price is 1000 Qt is 2 Tax is 10"
+result = `Price is ${price}  Qt is ${qt} Tax is ${tax}`;
+"Price is 1000  Qt is 2 Tax is 10"
+a="Let's Do It ";
+"Let's Do It "
+typeof a;
+"string"
+var rr = new String("Amit");
+undefined
+rr;
+String {"Amit"}
+a;
+"Let's Do It "
+rr.length
+4
+var tt = 1000;
+undefined
+typeof tt;
+"number"
+var ff = 10000;
+undefined
+var f1 = new Number(1000);
+undefined
+typeof ff;
+"number"
+typeof f1;
+"object"
+var r = true;
+undefined
+typeof r;
+"boolean"
+r + 100
+101
+a="amit";
+"amit"
+a = "aMiT";
+"aMiT"
+a.charAt(0)
+"a"
+a.charAt(0).toUpperCase();
+"A"
+a.substring(1)
+"MiT"
+a.substring(1).toLowerCase();
+"mit"
+a.charAt(0).toUpperCase() + a.substring(1).toLowerCase();
+"Amit"
+a;
+"aMiT"
+a[0]
+"a"
+var arr = [];
+undefined
+var t = new String("hello");
+undefined
+typeof t;
+"object"
+typeof arr;
+"object"
+typeof String;
+"function"
+typeof Number;
+"function"
+typeof Array;
+"function"
+var phones = {"ram":33343,"shyam":56666,"sohan":3333,"mohan":22254,"tim":66666};
+undefined
+typeof phones;
+"object"
+var arr = [10,20,30];
+undefined
+arr[0];
+10
+phones["ram"]
+33343
+var phones = {"ram":[33343,5455,2222],"shyam":56666,"sohan":3333,"mohan":22254,"tim":66666};
+undefined
+phones["ram"]
+(3) [33343, 5455, 2222]
+phones["ram"][1]
+5455
