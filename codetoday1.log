@@ -1,0 +1,426 @@
+var a = "1000.200";
+undefined
+typeof a;
+"string"
+var b = parseFloat(a);
+undefined
+b;
+1000.2
+b = parseInt(a);
+1000
+var b = parseFloat(a);
+undefined
+typeof b;
+"number"
+b = parseInt(a);
+1000
+typeof b;
+"number"
+b;
+1000
+a;
+"1000.200"
+a.split(".");
+(2) ["1000", "200"]
+a.split(".")[1];
+"200"
+parseInt(a.split(".")[1]);
+200
+a;
+"1000.200"
+a = "Amit";
+"Amit"
+a.toUpperCase();
+"AMIT"
+a;
+"Amit"
+a;
+"Amit"
+var b = a.toUpperCase();
+undefined
+b;
+"AMIT"
+a;
+"Amit"
+a="Ok";
+"Ok"
+a;'
+VM852:1 Uncaught SyntaxError: Invalid or unexpected token
+a;
+"Ok"
+var arr = [11,2,44];
+undefined
+arr = [];
+[]
+var arr = [11,2,44];
+undefined
+arr.length=0
+0
+arr;
+[]
+var arr = [11,2,44,444,55,6,6];
+undefined
+arr.length = arr.length-3
+4
+arr;
+(4) [11, 2, 44, 444]
+arr.splice(1,2);
+(2) [2, 44]
+arr;
+(2) [11, 444]
+var arr = [11,2,44,444,55,6,6];
+undefined
+arr.splice
+ƒ splice() { [native code] }
+console.dir(arr.splice);
+VM1456:1 ƒ splice()arguments: [Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+    at Function.invokeGetter (<anonymous>:1:142)]caller: [Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+    at Function.invokeGetter (<anonymous>:1:142)]length: 2name: "splice"__proto__: ƒ ()[[Scopes]]: Scopes[0]No properties
+undefined
+arr;
+(7) [11, 2, 44, 444, 55, 6, 6]
+arr.splice(1,2,100,1000);
+(2) [2, 44]
+arr;
+(7) [11, 100, 1000, 444, 55, 6, 6]
+arr.push(100000);
+8
+arr;
+(8) [11, 100, 1000, 444, 55, 6, 6, 100000]
+arr.pop();
+100000
+arr;
+(7) [11, 100, 1000, 444, 55, 6, 6]
+function search(val){
+console.log("Before I is ",i);
+for(var i =0 ; i<arr.length; i++){
+
+}
+console.log("After I is ",i);
+}
+undefined
+search(10);
+VM2055:2 Before I is  undefined
+VM2055:6 After I is  7
+undefined
+function search(val){
+console.log("Before I is ",i);
+for(let i =0 ; i<arr.length; i++){
+
+}
+console.log("After I is ",i);
+}
+undefined
+search(10);
+VM2103:2 Uncaught ReferenceError: i is not defined
+    at search (<anonymous>:2:28)
+    at <anonymous>:1:1
+search @ VM2103:2
+(anonymous) @ VM2109:1
+function search(val){
+//console.log("Before I is ",i);
+for(let i =0 ; i<arr.length; i++){
+
+}
+console.log("After I is ",i);
+}
+undefined
+search(10);
+VM2117:6 Uncaught ReferenceError: i is not defined
+    at search (<anonymous>:6:27)
+    at <anonymous>:1:1
+search @ VM2117:6
+(anonymous) @ VM2123:1
+function search(val){
+//console.log("Before I is ",i);
+for(let i =0 ; i<arr.length; i++){
+
+}
+//console.log("After I is ",i);
+}
+undefined
+function search(val){
+//console.log("Before I is ",i);
+for(let i =0 ; i<arr.length; i++){
+    if(arr[i]==val){
+        return i;
+    }
+}
+return -1;
+//console.log("After I is ",i);
+}
+undefined
+arr;
+(7) [11, 100, 1000, 444, 55, 6, 6]
+search(55);
+4
+search(100);
+1
+search(1000000000);
+-1
+arr.splice(search(100),1);
+[100]
+arr;
+(6) [11, 1000, 444, 55, 6, 6]
+arr;
+(6) [11, 1000, 444, 55, 6, 6]
+for(let ele of arr){
+    console.log(ele);
+}
+VM2458:2 11
+VM2458:2 1000
+VM2458:2 444
+VM2458:2 55
+VM2458:2 6
+VM2458:2 6
+undefined
+function add(a,b){
+    return a + b;
+}
+undefined
+add(100,200);
+300
+
+sub(100,200);
+function sub(a,b){
+return a - b;
+}
+
+-100
+function add(a,b){
+    return a + b;
+}
+undefined
+add(10,2)
+12
+add(10);
+NaN
+function add(a,b){
+console.log("A is ",a," and B is ",b);
+    return a + b;
+}
+undefined
+add(10);
+VM2801:2 A is  10  and B is  undefined
+NaN
+10  + undefined;
+NaN
+add();
+VM2801:2 A is  undefined  and B is  undefined
+NaN
+function add(a=0,b=0){
+console.log("A is ",a," and B is ",b);
+    return a + b;
+}
+undefined
+add();
+VM2890:2 A is  0  and B is  0
+0
+add(1000);
+VM2890:2 A is  1000  and B is  0
+1000
+var t ;
+undefined
+typeof t;
+"undefined"
+t++
+NaN
+t ;
+NaN
+var t;
+undefined
+t;
+NaN
+var t1 ;
+undefined
+t1;
+undefined
+var t2 = "undefined";
+undefined
+typeof t2;
+"string"
+typeof t1;
+"undefined"
+typeof t1 == t2;
+true
+var a1 = 100;
+undefined
+var a2 = "100";
+undefined
+a1 == a2;
+true
+a1 === a2;
+false
+t1;
+undefined
+if(typeof t1==="undefined"){
+t1 = 1000;
+}
+1000
+t1 = "";
+""
+t1 =0;
+0
+t1 = NaN;
+NaN
+t1 = Infinity;
+Infinity
+t1 = null;
+null
+t1 = "";
+""
+t1.length;
+0
+if(t1.length==0){
+console.log("Blank");
+}
+VM3673:2 Blank
+undefined
+t1 =0;
+0
+if(t1==0){}
+undefined
+t1 = NaN;
+NaN
+isNaN(t1);
+true
+t1 =null
+null
+if(t1==null){}
+undefined
+t1=undefined;
+undefined
+if(t1){
+    console.log("Value Present");
+}
+else{
+console.log("Not Present");
+}
+VM3982:5 Not Present
+undefined
+t1=0;
+0
+if(t1){
+    console.log("Value Present");
+}
+else{
+console.log("Not Present");
+}
+VM4003:5 Not Present
+undefined
+t1="";
+""
+if(t1){
+    console.log("Value Present");
+}
+else{
+console.log("Not Present");
+}
+VM4026:5 Not Present
+undefined
+t1 = NaN;
+NaN
+if(t1){
+    console.log("Value Present");
+}
+else{
+console.log("Not Present");
+}
+VM4052:5 Not Present
+undefined
+t1 = null;
+null
+if(t1){
+    console.log("Value Present");
+}
+else{
+console.log("Not Present");
+}
+VM4083:5 Not Present
+undefined
+t1 = Infinity;
+Infinity
+if(t1){
+    console.log("Value Present");
+}
+else{
+console.log("Not Present");
+}
+VM4111:2 Value Present
+undefined
+t1 = 10000
+10000
+if(t1){
+    console.log("Value Present");
+}
+else{
+console.log("Not Present");
+}
+VM4141:2 Value Present
+undefined
+t1 = 0;
+0
+if(t1){
+    console.log("Value Present");
+}
+else{
+console.log("Not Present");
+}
+VM4166:5 Not Present
+undefined
+function add(a,b){
+console.log("A is ",a," and B is ",b);
+a = a || 0;
+b = b || 0;
+    return a + b;
+}
+undefined
+add();
+VM4292:2 A is  undefined  and B is  undefined
+0
+add(99);
+VM4292:2 A is  99  and B is  undefined
+99
+add(99,88);
+VM4292:2 A is  99  and B is  88
+187
+add(10,20);
+VM4292:2 A is  10  and B is  20
+30
+sub(10,20);
+-10
+function calc(){
+var add = function (a=0,b=0){
+    return a + b;
+}
+return add;
+}
+function order(){
+var add = function(oid){
+console.log("Order Added ");
+}
+return add;
+}
+function customer(){
+var add = function(cid){
+console.log("Customer Added ");
+}
+return add;
+}
+undefined
+var t = calc();
+undefined
+t;
+ƒ (a=0,b=0){
+    return a + b;
+}
+t(100,200);
+300
+calc()(100,20);
+120
+order()(1000);
+VM4843:9 Order Added 
+undefined
+customer()(100);
+VM4843:15 Customer Added 
+undefined
