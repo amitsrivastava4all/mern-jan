@@ -1,0 +1,210 @@
+function add(){
+console.log("I am in add ");
+}
+undefined
+add();
+VM364:2 I am in add 
+undefined
+function add(){
+console.log("I am in add ");
+return 10;
+}
+undefined
+add();
+VM399:2 I am in add 
+10
+add(10,20);
+VM399:2 I am in add 
+10
+add("Amit",20);
+VM399:2 I am in add 
+10
+console.dir(add);
+VM516:1 ƒ add()length: 0name: "add"arguments: nullcaller: nullprototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM399:1[[Scopes]]: Scopes[1]
+undefined
+function add(){
+console.log("I am in add ",arguments);
+return 10;
+}
+undefined
+add(1000,2000);
+VM583:2 I am in add  Arguments(2) [1000, 2000, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+10
+function add(){
+var sum = 0;
+for(let i = 0 ; i<arguments.length; i++){
+sum+=arguments[i];
+}
+return sum;
+//console.log("I am in add ",arguments);
+//return 10;
+}
+undefined
+add();
+0
+add(10,20,30);
+60
+show();
+function show(){
+console.log("I am Show ");
+}
+VM987:3 I am Show 
+undefined
+function calc(){
+var add=function(x,y){
+    return x + y;
+}
+var sub = function (x,y){
+    return x - y;
+}
+}
+undefined
+function calc(){
+var add=function(x,y){
+    return x + y;
+}
+var sub = function (x,y){
+    return x - y;
+}
+return  [add,sub];
+}
+undefined
+var t = calc();
+undefined
+t;
+(2) [ƒ, ƒ]0: ƒ (x,y)length: 2name: "add"arguments: nullcaller: nullprototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM1235:2[[Scopes]]: Scopes[1]1: ƒ (x,y)length: 2name: "sub"arguments: nullcaller: nullprototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM1235:5[[Scopes]]: Scopes[1]length: 2__proto__: Array(0)
+t[0];
+ƒ (x,y){
+    return x + y;
+}
+t[0](10,20);
+30
+t[1](100,200);
+-100
+function calc(m){
+var add=function(x,y){
+    return x + y+m;
+}
+var sub = function (x,y){
+    return x - y - m;
+}
+return  [add,sub];
+}
+undefined
+var t = calc(1000);
+undefined
+t;
+(2) [ƒ, ƒ]0: ƒ (x,y)1: ƒ (x,y)length: 2__proto__: Array(0)
+t[0]
+
+ƒ (x,y){
+    return x + y+m;
+}
+t[0](1,2)
+1003
+function calc(m){
+var add=function add(x,y){
+    return x + y+m;
+}
+var sub = function sub(x,y){
+    return x - y - m;
+}
+return  [add,sub];
+}
+undefined
+var t = calc(100);
+undefined
+t;
+(2) [ƒ, ƒ]0: ƒ add(x,y)1: ƒ sub(x,y)length: 2__proto__: Array(0)
+t[0](10,20);
+130
+function calc(m){
+var add=function(x,y){
+    return x + y+m;
+}
+var sub = function (x,y){
+    return x - y - m;
+}
+return  [add,sub];
+}
+undefined
+var x = [10,20,30,20,11,9,8,7,5,0,-2,-8];
+undefined
+var x = {"delhi":10,"mumbai":20};
+undefined
+x["delhi"]
+10
+function calc(m){
+var add=function(x,y){
+    return x + y+m;
+}
+var sub = function (x,y){
+    return x - y - m;
+}
+return  {"addition":add,"subtract":sub};
+}
+undefined
+var t = calc(100);
+undefined
+t;
+{addition: ƒ, subtract: ƒ}
+t["addition"](10,20);
+130
+t.addition(10,20);
+130
+function calc(m){
+var add=function(x,y){
+    return x + y+m;
+}
+var sub = function (x,y){
+    return x - y - m;
+}
+return  {"addition":add,"subtract":sub};
+}
+undefined
+test();
+var test = function(){
+console.log(" I am Test ");
+}
+VM2070:1 Uncaught TypeError: test is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM2070:1
+
+var test = function(){
+console.log(" I am Test ");
+}
+test();
+VM2080:3  I am Test 
+undefined
+test2();
+ function test2(){
+console.log(" I am Test2 ");
+}
+
+VM2132:3  I am Test2 
+undefined
+var test3;
+test3();
+ test3 = function(){
+console.log(" I am Test ");
+}
+
+VM2178:2 Uncaught TypeError: test3 is not a function
+    at <anonymous>:2:1
+(anonymous) @ VM2178:2
+const adder = (x,y)=>x+y;
+undefined
+adder(100,200);
+300
+const cube = num=>num**3;
+undefined
+cube(3);
+27
+const adder2 = (x,y)=>{
+console.log("X is "+x+" and Y is "+y);
+return x + y;
+}
+undefined
+adder2(100,2000);
+VM2508:2 X is 100 and Y is 2000
+2100
