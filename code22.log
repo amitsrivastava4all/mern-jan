@@ -1,0 +1,180 @@
+const cube = num=>num**3;
+undefined
+typeof cube;
+"function"
+cube(2);
+8
+cube = 1000
+VM375:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:6
+(anonymous) @ VM375:1
+console.log(a);
+VM422:1 Uncaught ReferenceError: a is not defined
+    at <anonymous>:1:13
+(anonymous) @ VM422:1
+var a;
+console.log(a);
+a = 1000;
+VM459:2 undefined
+1000
+function show(){
+if(10>2){
+var gg = 1000;
+gg++;
+}
+console.log(gg);
+}
+undefined
+show();
+VM556:6 1001
+undefined
+function show(){
+if(10>2){
+let g1 = 1000;
+g1++;
+}
+console.log(g1);
+}
+undefined
+show();
+VM600:6 Uncaught ReferenceError: g1 is not defined
+    at show (<anonymous>:6:13)
+    at <anonymous>:1:1
+show @ VM600:6
+(anonymous) @ VM620:1
+const adder2 = (x,y)=>{
+console.log("X is "+x+" and Y is "+y);
+return x + y;
+}
+undefined
+function loop(fn){
+var n = 10;
+for(let i = 1; i<=n; i++){
+console.log(fn(i));
+// if(choice==1){
+// evenOdd(i);
+// }
+}
+}
+const evenOdd = num=>num%2==0?"Even No "+num:"Odd No "+num;
+const cube1 = num => num**3;
+const table = num=>5*num;
+loop(evenOdd);
+loop(cube1);
+loop(table);
+VM1327:4 Odd No 1
+VM1327:4 Even No 2
+VM1327:4 Odd No 3
+VM1327:4 Even No 4
+VM1327:4 Odd No 5
+VM1327:4 Even No 6
+VM1327:4 Odd No 7
+VM1327:4 Even No 8
+VM1327:4 Odd No 9
+VM1327:4 Even No 10
+VM1327:4 1
+VM1327:4 8
+VM1327:4 27
+VM1327:4 64
+VM1327:4 125
+VM1327:4 216
+VM1327:4 343
+VM1327:4 512
+VM1327:4 729
+VM1327:4 1000
+VM1327:4 5
+VM1327:4 10
+VM1327:4 15
+VM1327:4 20
+VM1327:4 25
+VM1327:4 30
+VM1327:4 35
+VM1327:4 40
+VM1327:4 45
+VM1327:4 50
+undefined
+function loop(fn){
+var n = 10;
+for(let i = 1; i<=n; i++){
+console.log(fn(i));
+// if(choice==1){
+// evenOdd(i);
+// }
+}
+}
+const evenOdd = num=>num%2==0?"Even No "+num:"Odd No "+num;
+const cube1 = num => num**3;
+const table = num=>5*num;
+loop(evenOdd);
+loop(cube1);
+loop(table);
+VM1421:1 Uncaught SyntaxError: Identifier 'evenOdd' has already been declared
+    at <anonymous>:1:1
+(anonymous) @ VM1421:1
+function add(x,y){
+return x + y;
+}
+add(10,20);
+30
+loop(num=>num%2==0?"Even No "+num:"Odd No "+num);
+VM1327:4 Odd No 1
+VM1327:4 Even No 2
+VM1327:4 Odd No 3
+VM1327:4 Even No 4
+VM1327:4 Odd No 5
+VM1327:4 Even No 6
+VM1327:4 Odd No 7
+VM1327:4 Even No 8
+VM1327:4 Odd No 9
+VM1327:4 Even No 10
+undefined
+var ee = [10,9,20,1,77,44,33,10];
+undefined
+ee.push(8888);
+9
+ee;
+(9) [10, 9, 20, 1, 77, 44, 33, 10, 8888]
+ee.pop();
+8888
+ee.push(8888);
+9
+for(let i = 0; i<ee.length; i++){
+console.log(ee[i]);
+}
+VM1825:2 10
+VM1825:2 9
+VM1825:2 20
+VM1825:2 1
+VM1825:2 77
+VM1825:2 44
+VM1825:2 33
+VM1825:2 10
+VM1825:2 8888
+undefined
+ee.forEach
+ƒ forEach() { [native code] }
+ee.forEach(e=>console.log(e));
+VM1932:1 10
+VM1932:1 9
+VM1932:1 20
+VM1932:1 1
+VM1932:1 77
+VM1932:1 44
+VM1932:1 33
+VM1932:1 10
+VM1932:1 8888
+undefined
+function printIt(num){
+console.log("Num is "+num);
+}
+ee.forEach(printIt);
+VM2140:2 Num is 10
+VM2140:2 Num is 9
+VM2140:2 Num is 20
+VM2140:2 Num is 1
+VM2140:2 Num is 77
+VM2140:2 Num is 44
+VM2140:2 Num is 33
+VM2140:2 Num is 10
+VM2140:2 Num is 8888
+undefined
