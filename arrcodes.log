@@ -1,0 +1,156 @@
+var arr =[90,100,20,99,100,33]; 
+undefined
+typeof arr;
+"object"
+arr instanceof Array;
+true
+typeof Array;
+"function"
+arr.length;
+6
+arr.push(8888);
+7
+arr;
+(7) [90, 100, 20, 99, 100, 33, 8888]
+arr.pop();
+8888
+arr.splice(1,2,999999,4444);
+(2) [100, 20]
+arr;
+(6) [90, 999999, 4444, 99, 100, 33]
+arr.splice(1,2);
+(2) [999999, 4444]
+arr;
+(4) [90, 99, 100, 33]
+function add(x,y=20,...a){ 
+var sum = x + y ;
+for(let i = 0 ; i<a.length; i++){
+sum+=a[i];
+}
+return sum;
+}
+undefined
+add(10);
+30
+add(10,100);
+110
+add(10,100,90,77,33);
+310
+function add(x,y=20,...a){ 
+var sum = x + y ;
+//for(let i = 0 ; i<a.length; i++){
+for(let i of arr){
+//sum+=a[i];
+sum +=i;
+}
+return sum;
+}
+undefined
+add(10,100,90,77,33);
+432
+arr;
+(4) [90, 99, 100, 33]
+function add(x,y=20,...a){ 
+var sum = x + y ;
+//for(let i = 0 ; i<a.length; i++){
+for(let i of a){
+//sum+=a[i];
+sum +=i;
+}
+return sum;
+}
+undefined
+add(10,100,90,77,33);
+310
+arr;
+(4) [90, 99, 100, 33]
+for(let i = 0 ; i<a.length; i++){
+console.log(arr[i]);
+}
+VM1389:1 Uncaught ReferenceError: a is not defined
+    at <anonymous>:1:19
+(anonymous) @ VM1389:1
+for(let i = 0 ; i<arr.length; i++){
+console.log(arr[i]);
+}
+VM1397:2 90
+VM1397:2 99
+VM1397:2 100
+VM1397:2 33
+undefined
+for(let i of arr){
+console.log(i);
+}
+VM1472:2 90
+VM1472:2 99
+VM1472:2 100
+VM1472:2 33
+undefined
+arr.forEach
+ƒ forEach() { [native code] }
+function printIt(ele){
+console.log("Ele ", ele);
+}
+arr.forEach(printIt);
+VM1769:2 Ele  90
+VM1769:2 Ele  99
+VM1769:2 Ele  100
+VM1769:2 Ele  33
+undefined
+function compare(ele){
+    return ele==100;
+}
+arr.find(compare);
+100
+function compare(ele){
+    return ele==100000;
+}
+arr.find(compare);
+undefined
+arr.find(ele=>ele==100);
+100
+arr.forEach(ele=>console.log(ele));
+VM2088:1 90
+VM2088:1 99
+VM2088:1 100
+VM2088:1 33
+undefined
+arr.findIndex(ele=>ele==100);
+2
+arr;
+(4) [90, 99, 100, 33]
+arr.filter(ele=>ele>90);
+(2) [99, 100]
+arr;
+(4) [90, 99, 100, 33]
+arr.filter((ele)=>ele>90);
+(2) [99, 100]
+arr.reduce((acc,ele)=>{
+console.log('Acc is '+acc+" Ele is "+ele);
+return acc+=ele;
+},acc=0);
+VM2588:2 Acc is 0 Ele is 90
+VM2588:2 Acc is 90 Ele is 99
+VM2588:2 Acc is 189 Ele is 100
+VM2588:2 Acc is 289 Ele is 33
+322
+arr;
+(4) [90, 99, 100, 33]
+arr.filter((ele)=>ele>90);
+(2) [99, 100]
+arr.reduce((acc,ele)=>{
+if(ele>90){
+acc.push(ele);
+}
+return acc;
+},acc=[]);
+(2) [99, 100]
+var emps = [{id:1001, name:'Ram',salary:9999, city:'Delhi Old'},{id:1002, name:'Shyam',salary:7999, city:'Mumbai'},{id:1003, name:'Tim',salary:19999, city:'Delhi New'}];
+undefined
+emps.reduce((acc,ele)=>{
+    if(ele.salary>9000){
+acc.push(ele.city);    
+}
+return acc;
+},acc=[]);
+(2) ["Delhi Old", "Delhi New"]
