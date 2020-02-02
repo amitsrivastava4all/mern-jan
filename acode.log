@@ -1,0 +1,51 @@
+var arr = [90,100,77,33,22,11];
+undefined
+arr.sort((first,second)=>first-second);
+(6) [11, 22, 33, 77, 90, 100]
+var names = ["shyam","tim","ram","vim","kim"];
+undefined
+"shyam".localeCompare("tim");
+-1
+"shyam".localeCompare("amit");
+1
+names.sort((first, second)=>first.localeCompare(second));
+(5) ["kim", "ram", "shyam", "tim", "vim"]
+var emps = [{id:1001, name:'Ram',salary:9999, city:'Delhi Old'},{id:1002, name:'Shyam',salary:7999, city:'Mumbai'},{id:1003, name:'Tim',salary:19999, city:'Delhi New'}];
+undefined
+emps.sort((first, second)=>first.salary - second.salary);
+(3) [{…}, {…}, {…}]0: {id: 1002, name: "Shyam", salary: 7999, city: "Mumbai"}1: {id: 1001, name: "Ram", salary: 9999, city: "Delhi Old"}2: {id: 1003, name: "Tim", salary: 19999, city: "Delhi New"}length: 3__proto__: Array(0)
+arr;
+(6) [11, 22, 33, 77, 90, 100]
+arr.sort((first,second)=>second- first);
+(6) [100, 90, 77, 33, 22, 11]0: 1001: 902: 773: 334: 225: 11length: 6__proto__: Array(0)
+arr.map((ele)=>{
+    return ele*0.10 + ele;
+})
+(6) [110, 99, 84.7, 36.3, 24.2, 12.1]
+arr;
+(6) [100, 90, 77, 33, 22, 11]
+arr.map(ele=>{
+return "Rs "+ele+".00";
+});
+(6) ["Rs 100.00", "Rs 90.00", "Rs 77.00", "Rs 33.00", "Rs 22.00", "Rs 11.00"]
+arr;
+(6) [100, 90, 77, 33, 22, 11]
+arr.map(ele=>ele);
+(6) [100, 90, 77, 33, 22, 11]
+var t = arr.map(ele=>ele);
+undefined
+t;
+(6) [100, 90, 77, 33, 22, 11]
+arr;
+(6) [100, 90, 77, 33, 22, 11]
+arr.filter(ele=>true);
+(6) [100, 90, 77, 33, 22, 11]
+var x = [...arr];
+undefined
+x;
+(6) [100, 90, 77, 33, 22, 11]
+arr.reduce((x, ele)=>{
+x.push(ele);
+return x;
+},x=[]);
+(6) [100, 90, 77, 33, 22, 11]
