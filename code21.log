@@ -1,0 +1,180 @@
+function add(){
+console.log("I am Add ");
+}
+undefined
+window;
+Window {parent: Window, opener: null, top: Window, length: 0, frames: Window, …}
+document;
+#document
+window.document;
+#document
+window.add();
+VM322:2 I am Add 
+undefined
+add();
+VM322:2 I am Add 
+undefined
+var add = 100;
+undefined
+window.add();
+VM637:1 Uncaught TypeError: window.add is not a function
+    at <anonymous>:1:8
+(anonymous) @ VM637:1
+add;
+100
+let add = 200;
+VM694:1 Uncaught SyntaxError: Identifier 'add' has already been declared
+    at <anonymous>:1:1
+(anonymous) @ VM694:1
+let add2 = 2000;
+undefined
+window.add;
+100
+window.add2;
+undefined
+function calc(){
+var add=function(){
+console.log("I am Add ");
+}
+return add;
+}
+var t = calc();
+undefined
+t;
+ƒ (){
+console.log("I am Add ");
+}
+typeof t;
+"function"
+t();
+VM958:3 I am Add 
+undefined
+var discount = 10;
+undefined
+function calc(){
+var x = 10;
+var add=function(){
+x++;
+console.log("I am Add ",x);
+}
+var sub=function(){
+x--;
+console.log("I am Sub ",x);
+}
+return {add,sub};
+}
+var t = calc();
+undefined
+var e = {id:1001, name:"ram"}
+undefined
+typeof e;
+"object"
+e instanceof Object;
+true
+var arr = [10,20,30];
+undefined
+typeof arr;
+"object"
+arr instanceof Array;
+true
+arr instanceof Object;
+true
+typeof arr;
+"object"
+var e = 10990;
+undefined
+typeof e;
+"number"
+typeof number;
+"undefined"
+var rr = new Number(100);
+undefined
+typeof rr;
+"object"
+typeof Object;
+"function"
+var e = {id:1001, name:"ram"}
+undefined
+var eid = 1002;
+undefined
+var ename = "Ram";'
+VM1674:1 Uncaught SyntaxError: Invalid or unexpected token
+var ename = "Ram";
+undefined
+var obj = {eid, ename};
+undefined
+obj;
+{eid: 1002, ename: "Ram"}
+function calc(){
+var x = 10;
+var add=function(){
+x++;
+console.log("I am Add ",x);
+}
+var sub=function(){
+x--;
+console.log("I am Sub ",x);
+}
+return {add,sub};
+}
+var t = calc();
+undefined
+t;
+{add: ƒ, sub: ƒ}
+typeof t;
+"object"
+t instanceof Object;
+true
+t.add();
+VM1738:5 I am Add  11
+undefined
+t.add();
+VM1738:5 I am Add  12
+undefined
+t.add();
+VM1738:5 I am Add  13
+undefined
+t.add();
+VM1738:5 I am Add  14
+undefined
+t.sub();
+VM1738:9 I am Sub  13
+undefined
+var calcObj = {
+add(){
+console.log("I am Add ");
+},
+sub:function(){
+console.log("I am Sub ");
+}
+}
+undefined
+calcObj.add();
+VM2081:3 I am Add 
+undefined
+var calcObj = {
+x:1000
+add(){
+console.log("I am Add ");
+},
+sub:function(){
+console.log("I am Sub ");
+}
+}
+VM2131:3 Uncaught SyntaxError: Unexpected identifier
+var calcObj = {
+x:1000,
+add(){
+console.log("I am Add ");
+},
+sub:function(){
+console.log("I am Sub ");
+}
+}
+undefined
+calcObj.x;
+1000
+calcObj.x= 9999;
+9999
+calcObj.x;
+9999
