@@ -1,0 +1,27 @@
+navigator.appVersion;
+navigator.cookieEnabled;
+navigator.geolocation.getCurrentPosition((cords)=>{
+console.log('Cord ', cords);
+},(err)=>console.log('Error is ',err));
+location.href="http://127.0.0.1:5500/jsapps/login.html"
+location.hostname
+screen.availWidth;
+screen.width;
+screen.pixelDepth;
+window.localStorage;
+window.localStorage.clear();
+localStorage.name="Amit";
+navigator.onLine;
+var buttons = document.getElementsByTagName("button");
+var buttons = document.querySelectorAll("button");
+var x = document.querySelectorAll("input[type='text']");
+var x = document.querySelector("#x");
+//var x = document.querySelector("#x");
+x.innerText="<b>Hello</b>";
+x.innerHTML="<b>Hello</b>";
+x.textContent;
+x.innerText;
+x.innerHTML;
+var matrix = Array(3);
+matrix[0]= new Array(3);
+matrix[1]= new Array(3);
