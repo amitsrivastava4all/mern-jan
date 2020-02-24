@@ -1,0 +1,122 @@
+var a = 1000;
+undefined
+typeof a;
+"number"
+var e= new Number(100);
+undefined
+typeof e;
+"object"
+Number
+ƒ Number() { [native code] }
+e++;
+100
+e;
+101
+typeof e;
+"number"
+typeof number;
+"undefined"
+function Employee(id,name,salary){
+
+this.id = id;
+this.name = name;
+this.salary = salary;
+
+}
+var ram = new Employee(1001, "Ram",9999);
+undefined
+ram;
+Employee {id: 1001, name: "Ram", salary: 9999}
+typeof ram;
+"object"
+ram instanceof Employee;
+true
+ram;
+Employee {id: 1001, name: "Ram", salary: 9999}id: 1001name: "Ram"salary: 9999__proto__: Object
+
+var shyam = new Employee(1002, "Shyam",19999);
+undefined
+shyam;
+Employee {id: 1002, name: "Shyam", salary: 19999}
+ram;
+Employee {id: 1001, name: "Ram", salary: 9999}
+function Employee(id,name,salary){
+
+this.id = id;
+this.name = name;
+this.salary = salary;
+
+}
+Employee.prototype.print= function(){
+console.log("Id "+this.id+" Name "+this.name);
+}
+
+ƒ (){
+console.log("Id "+this.id+" Name "+this.name);
+}
+var tim = new Employee(1001,"Tim",9999);
+undefined
+tim;
+Employee {id: 1001, name: "Tim", salary: 9999}id: 1001name: "Tim"salary: 9999__proto__: print: ƒ ()constructor: ƒ Employee(id,name,salary)__proto__: Object
+Employee.prototype
+{print: ƒ, constructor: ƒ}
+class Person{}
+undefined
+typeof Person;
+"function"
+class Student{
+constructor(id, name, course){
+this.id = id;
+this.name = name;
+this.course = course;
+}
+display(){
+console.log("Id "+this.id +" Name "+this.name);
+}
+}
+undefined
+var ram = new Student(1001, "Ram","JS");
+undefined
+ram;
+Student {id: 1001, name: "Ram", course: "JS"}id: 1001name: "Ram"course: "JS"__proto__: constructor: class Studentdisplay: ƒ display()__proto__: Object
+var e = "amit";
+undefined
+typeof e;
+"string"
+var q = new String("amit");
+undefined
+typeof q;
+"object"
+q instanceof String;
+true
+String.prototype.titleCase= function(){
+console.log("Title Case Call ",this);
+}
+ƒ (){
+console.log("Title Case Call ",this);
+}
+var e = "amit";
+undefined
+e.titleCase();
+VM2107:2 Title Case Call  String {"amit"}0: "a"1: "m"2: "i"3: "t"length: 4__proto__: String[[PrimitiveValue]]: "amit"
+undefined
+class A{
+constructor(){
+console.log("A Cons Call ");
+}
+}
+class B extends A{
+constructor(){
+super();
+console.log("B Cons Call ");
+}
+}
+undefined
+var b = new B();
+VM2360:3 A Cons Call 
+VM2360:9 B Cons Call 
+undefined
+b;
+B {}__proto__: Aconstructor: class B__proto__: constructor: class A__proto__: constructor: ƒ Object()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()hasOwnProperty: ƒ hasOwnProperty()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toString: ƒ toString()valueOf: ƒ valueOf()toLocaleString: ƒ toLocaleString()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+eval("10+20*5-3")
+107
