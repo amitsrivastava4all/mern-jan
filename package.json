@@ -1,0 +1,18 @@
+{
+  "name": "firstapp",
+  "version": "1.0.0",
+  "description": "this is a demo app",
+  "main": "one.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "demo",
+    "app"
+  ],
+  "author": "amit",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^3.0.0"
+  }
+}
