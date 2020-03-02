@@ -1,0 +1,56 @@
+function Employee(id, name,salary){
+this.id = id;
+this.name = name;
+this.salary = salary;
+}
+undefined
+var ram =new Employee(1001,"Ram",9999);
+undefined
+ram;
+Employee {id: 1001, name: "Ram", salary: 9999}id: 1001name: "Ram"salary: 9999__proto__: Object
+var shyam = new Employee(1002, "Shyam",3333);
+undefined
+ram;
+Employee {id: 1001, name: "Ram", salary: 9999}
+shyam;
+Employee {id: 1002, name: "Shyam", salary: 3333}
+Employee.prototype.bonus = 999;
+999
+ram.id;
+1001
+ram.bonus;
+999
+shyam.id;
+1002
+shyam.bonus;
+999
+ram;
+Employee {id: 1001, name: "Ram", salary: 9999}id: 1001name: "Ram"salary: 9999__proto__: bonus: 999constructor: ƒ Employee(id, name,salary)__proto__: constructor: ƒ Object()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()hasOwnProperty: ƒ hasOwnProperty()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toString: ƒ toString()valueOf: ƒ valueOf()toLocaleString: ƒ toLocaleString()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+var obj = {id:999};
+undefined
+var map = {"ram":3333,"shyam":5555};
+undefined
+map["ram"]
+3333
+map.ram;
+3333
+var map = {"ram esh":3333,"shyam":5555};
+undefined
+map.ram esh;
+VM1082:1 Uncaught SyntaxError: Unexpected identifier
+map["ram esh"]
+3333
+var env= "ENV=DEV";
+undefined
+env.split("=");
+(2) ["ENV", "DEV"]
+env.split("=")[1];
+"DEV"
+var map= {"DEV":"10.1.90.100","SIT":"10.1.88.200"};
+undefined
+var envName = env.split("=")[1];
+undefined
+envName;
+"DEV"
+map[envName];
+"10.1.90.100"
