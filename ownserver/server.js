@@ -35,8 +35,53 @@ function handleRequestResponse(request, response){
     if(request.url=='/'){
         serveStaticFile(response,'/index.html');
     }
-    else{
+    else
+    if(isStaticFile(request.url))
+    {
      serveStaticFile(response, request.url);
+    }
+    else
+    if(request.url=='/login' && request.method=='POST'){
+        //request.headers
+       response.write("I am in Login with POST");
+       var postData  = '';
+       request.on('data',(chunk)=>{
+        postData +=chunk;
+       });
+       request.on('end',()=>{
+        const queryString = require('querystring');
+        const obj = queryString.parse(postData);
+        let userid = obj.userid;
+        let pwd = obj.pwd;
+        if(userid == pwd){
+            response.write("Welcome "+userid);
+        }
+        else{
+        response.write("Invalid Userid or Password");
+        }
+        response.end();
+       });
+       
+    }
+    else
+    if(request.url.startsWith('/login') && request.method=='GET'){
+        const parser = require('./utils/urlparser');
+       var obj =  parser(request.url);
+        // const url = require('url');
+        // var obj = url.parse(request.url,true);
+        let userid = obj.query.userid;
+        let pwd = obj.query.pwd;
+        if(userid == pwd){
+            response.write("Welcome "+userid);
+        }
+        else{
+        response.write("Invalid Userid or Password");
+        }
+        response.end();
+    }
+    else{
+        response.write('404 File Not Found');
+        response.end();
     }
     
    
