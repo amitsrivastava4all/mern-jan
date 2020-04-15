@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard Page</title>
+</head>
+<body>
+    <form action='logout'>
+        <button>Logout</button>
+    </form>
+    <%- include('partials/header') %>
+    <p>Email is <%=email%></p>
+    User Phone Numbers are 
+    <%
+        phone.forEach(p=>{
+          %>
+         
+          <p><%=p%></p>      
+       <%
+        });
+    %>
+    <h1>Welcome <%=uid%> </h1>
+    <%- include('partials/footer') %>
+</body>
+</html>
