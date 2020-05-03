@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+    <script>
+    window.addEventListener('load',()=>{
+    
+        var socket = io.connect('http://localhost:1234');
+        // on Rec
+        // emit send
+        socket.on('allmsg',(data)=>{
+            console.log('All Msg is ',data);
+            var div = document.querySelector('#allmsgs');
+            var oldMsg = div.innerText;
+            var newMsg = oldMsg+' '+data;
+            div.innerText = newMsg;
+        })
+        socket.on('message',(data)=>{
+            var div = document.querySelector('#allmsgs');
+            var oldMsg = div.innerText;
+            var newMsg = oldMsg+' '+data.msg;
+            div.innerText = newMsg;
+            //console.log('Data is ',data.msg);
+        });
+        document.querySelector('#send').addEventListener('click',()=>{
+            var myMsg = document.querySelector('#msgtxt').value;
+            socket.emit('send',myMsg);
+        })
+    })
+    </script>
+</head>
+<body>
+    <div id='allmsgs'></div>
+    <textarea  id="msgtxt" cols="30" rows="10" placeholder="Type Ur Msg"></textarea>
+    <button id='send'>Send Msg</button>
+</body>
+</html>
